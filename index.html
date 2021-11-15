@@ -18,15 +18,37 @@
        <p>2 = BELOW EXPECTATION</p>
        <p>1 = POOR</p>
    </div>
-   <form style="display: flex; justify-content: center;" method="post" action="https://sheetdb.io/api/v1/58f61be4dda40"> 
-       <div>
-            <ol>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript">
+        function surveyform() {
+            var $form = $('form#mysurveyform')
+           console.log("start");
+           $.ajax({
+               url : 'https://script.google.com/macros/s/AKfycbwLR-ufFHuDipynoSNV5v_TP0UuFtdrEjlZ-UU55NVwd7hjMYDD0F9jf6dEuzhzJLT5/exec',
+               method: "GET",
+               dataType: "json",
+               data: $form.serializeArray(),
+               success: function(name){
+                   console.log(name);
+               },
+               error: function(newname){
+                   console.log("error" + newname);
+               }
+           });
+       }
+   </script>
+   <form style="display: flex; justify-content: center;"  id="mysurveyform"> 
+    
+        <label>First name</label>
+        <input type="text" name="fname">
+        <label>Last name</label>
+        <input type="text" name="lname">
+            <!-- <ol>
                 <li>
-                    <label for="fname">First name</label><br>
-                    <input type="text" id="fname" name="data[name]">
+                 
                 </li>
-                <li>
-                    <label for="lname">Last name</label><br>
+                <li> -->
+                    <!-- <label for="lname">Last name</label><br>
                     <input type="text" id="lname" name="lname">
                 </li>
                 <li>
@@ -129,13 +151,10 @@
                     <div>         
                         <textarea id="more-info" name="more-info" value="more-info" style="width: 100%;"> </textarea>
                     </div> 
-                </li>
-            </ol>
-            <div>
-                <input type="submit" style="cursor: pointer; background-color:rgba(220, 0, 0, 1); border-radius: 10px; padding: 20px 20px; border: 0; color: #fff; font-size: 1rem; ">
-            </div>
-       </div>
+                </li> -->
+            <!-- </ol> -->
+         
    </form>
-   <script src="https://sheetdb.io/handlebars.js"></script>
+   <button style="cursor: pointer; background-color:rgba(220, 0, 0, 1); border-radius: 10px; padding: 20px 20px; border: 0; color: #fff; font-size: 1rem; " onClick="surveyform()">Submit</button>
 </body>
 </html>
