@@ -8,15 +8,12 @@
 </head>
 <body>
    <div style="text-align: center; margin-top: 3.5em;">
-    <h1>Self Assessment Form</h1>
-    <p>Fill the form to assess yourself performance so far</p>
+    <h1 style="color: rgb(34, 34, 167); font-size: 2rem;"><span style="color: red;">e</span>Tranzact <span style="color: black; font-size: 20px;">Intenational PLC</span></h1>
+    <h1>Intern Assessment Form</h1>
+    <p>Fill the form to assess your performance so far in the internship programme</p>
    </div>
    <div style="text-align:center; background-color: rgb(238, 238, 238); border-radius: 5px;">
-       <h3>Rating Key</h3>
-       <p>4 = EXCEEDS EXPECTATION</p>
-       <p>3 = MEETS EXPECTATION</p>
-       <p>2 = BELOW EXPECTATION</p>
-       <p>1 = POOR</p>
+    <p style="padding: 30px;">By filling this form you confirm that eTranzact has your consent to the holding, processing of your personal data for all purposes relating to your internship.</p>
    </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script type="text/javascript">
@@ -37,124 +34,216 @@
            });
        }
    </script>
-   <form style="display: flex; justify-content: center;"  id="mysurveyform"> 
-    
-        <label>First name</label>
-        <input type="text" name="fname">
-        <label>Last name</label>
-        <input type="text" name="lname">
-            <!-- <ol>
-                <li>
-                 
+    <div style="display: flex; justify-content: center;">
+        <form  id="mysurveyform" >
+            <ol>
+                <li style="padding: 10px 0;">
+                    <label for="title">Title</label>
+                    <select id="title" name="title">
+                      <option value="">Select</option>
+                      <option value="Mr">Mr</option>
+                      <option value="Miss">Miss</option>
+                      <option value="Mrs">Mrs</option>
+                    </select> 
                 </li>
-                <li> -->
-                    <!-- <label for="lname">Last name</label><br>
-                    <input type="text" id="lname" name="lname">
+                <li style="padding: 10px 0;">
+                    <label for="department">Department</label>
+                    <select id="department" name="department">
+                       <option value="">Select</option>
+                      <option value="Technology">Technology</option>
+                      <option value="Risk">Risk and Security</option>
+                      <option value="Admin">Administrative</option>
+                      <option value="Customer Support">Customer Support</option>
+                    </select> 
                 </li>
-                <li>
-                    <p>Which department do you work in?</p>
-                    <div>         
-                        <input type="radio" id="department" name="the_department" value="Customer Support"> 
-                        <label for="department">Customer Support</label><br>  
-                    </div>
-                    <div>         
-                        <input type="radio" id="department" name="the_department" value="Technology"> 
-                        <label for="department">Technology</label><br>  
-                    </div>
-                    <div>         
-                        <input type="radio" id="department" name="the_department" value="Accounting"> 
-                        <label for="department">Accounting</label><br>  
-                    </div>
-                    <div>         
-                        <input type="radio" id="department" name="the_department" value="Risk and Security"> 
-                        <label for="department">Risk and Security</label><br>  
-                    </div>
+                <li style="padding: 10px 0;">
+                    <label for="startdate">Start Date</label>
+                    <input type="date" value="yyyy-mm-dd" name="startdate" id="startdate" required>
+                </li>
+                <li style="padding: 10px 0;">
+                    <label for="fname">First name</label>
+                    <input type="text" name="fname" id="fname" required>
+                </li>
+                <li style="padding: 10px 0;">
+                    <label for="lname">Last name</label>
+                    <input type="text" name="lname" id="lname" required>
+                </li>
+                <li style="padding: 10px 0;">
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" id="email" required>
+                </li>
+                <li style="padding: 10px 0;">
+                    <label for="telNo">Phone number:</label>
+                    <input id="telNo" name="telNo" type="tel">
                 </li>
                 <li>
                     <p>Overall, how would you rate your internship experience at etranzact company</p>
                     <div>         
-                        <input type="radio" id="four" name="rate" value="Four"> 
-                        <label for="four">4</label><br>  
+                        <input type="radio" id="four" name="rate-internship" value="Exceeds Expectation"> 
+                        <label for="four">Exceeds Expectation</label><br>  
                     </div>
                     <div>         
-                        <input type="radio" id="three" name="rate" value="Three"> 
-                        <label for="three">3</label><br>  
+                        <input type="radio" id="three"name="rate-internship" value="Meets Expectation"> 
+                        <label for="three">Meets Expectation</label><br>  
                     </div>
                     <div>         
-                        <input type="radio" id="two" name="rate" value="Two"> 
-                        <label for="two">2</label><br>  
+                        <input type="radio" id="two" name="rate-internship" value="Below Expectation"> 
+                        <label for="two">Below Expectation</label><br>  
                     </div>
                     <div>         
-                        <input type="radio" id="one" name="rate" value="One"> 
-                        <label for="one">1</label><br>  
-                    </div>
-                </li>
-                <li>
-                    <p>How do you perform when working with team members? Do you value team interactions and balance your personal efforts with team efforts?.</p>
-                    <div>         
-                        <input type="radio" id="four" name="rate" value="Four"> 
-                        <label for="four">4</label><br>  
-                    </div>
-                    <div>         
-                        <input type="radio" id="three" name="rate" value="Three"> 
-                        <label for="three">3</label><br>  
-                    </div>
-                    <div>         
-                        <input type="radio" id="two" name="rate" value="Two"> 
-                        <label for="two">2</label><br>  
-                    </div>
-                    <div>         
-                        <input type="radio" id="one" name="rate" value="One"> 
-                        <label for="one">1</label><br>  
+                        <input type="radio" id="one" name="rate-internship" value="Poor"> 
+                        <label for="one">Poor</label><br>  
                     </div>
                 </li>
                 <li>
-                    <p>How comfortable did you feel asking questions from your mentors?</p>
+                    <p>I have acquired valuable skills that I will be able to use in any work situation </p>
                     <div>         
-                        <input type="radio" id="four" name="rate" value="Four"> 
-                        <label for="four">Extremely comfortable</label><br>  
+                        <input type="radio" id="four" name="acquire-skills" value="Strongly Agree"> 
+                        <label for="four">Strongly Agree</label><br>  
                     </div>
                     <div>         
-                        <input type="radio" id="three" name="rate" value="Three"> 
-                        <label for="three">Very comfortable</label><br>  
+                        <input type="radio" id="three" name="acquire-skills" value="Agree"> 
+                        <label for="three">Agree</label><br>  
                     </div>
                     <div>         
-                        <input type="radio" id="two" name="rate" value="Two"> 
-                        <label for="two">Not so comfortable</label><br>  
+                        <input type="radio" id="two" name="acquire-skills" value="Disagree"> 
+                        <label for="two">Disagree</label><br>  
                     </div>
                     <div>         
-                        <input type="radio" id="one" name="rate" value="One"> 
-                        <label for="one">Not at all comfortable</label><br>  
-                    </div>
-                </li>
-                <li>
-                    <p>How likely is it that you would recommend this internship program to a friend or colleague?</p>
-                    <div>         
-                        <input type="radio" id="four" name="rate" value="Four"> 
-                        <label for="four">Extremely likely</label><br>  
-                    </div>
-                    <div>         
-                        <input type="radio" id="three" name="rate" value="Three"> 
-                        <label for="three">Very likely</label><br>  
-                    </div>
-                    <div>         
-                        <input type="radio" id="two" name="rate" value="Two"> 
-                        <label for="two">Not so likely</label><br>  
-                    </div>
-                    <div>         
-                        <input type="radio" id="one" name="rate" value="One"> 
-                        <label for="one">Not at all likely</label><br>  
+                        <input type="radio" id="one" name="acquire-skills" value="Strongly disagree"> 
+                        <label for="one">Strongly disagree</label><br>  
                     </div>
                 </li>
                 <li>
-                    <label for="more-info">Anything else you would like to tell us about the inernship expereince?</label> 
+                    <p>The tasks assigned to me helped me focus on my lerarning </p>
                     <div>         
-                        <textarea id="more-info" name="more-info" value="more-info" style="width: 100%;"> </textarea>
-                    </div> 
-                </li> -->
-            <!-- </ol> -->
-         
-   </form>
-   <button style="cursor: pointer; background-color:rgba(220, 0, 0, 1); border-radius: 10px; padding: 20px 20px; border: 0; color: #fff; font-size: 1rem; " onClick="surveyform()">Submit</button>
+                        <input type="radio" id="four" name="focus-tasks" value="Strongly Agree"> 
+                        <label for="four">Strongly Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="three" name="focus-tasks" value="Agree"> 
+                        <label for="three">Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="two" name="focus-tasks" value="Disagree"> 
+                        <label for="two">Disagree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="one" name="focus-tasks" value="Strongly disagre"> 
+                        <label for="one">Strongly disagree</label><br>  
+                    </div>
+                </li>
+                <li>
+                    <p>I found it easier to communicate with my mentor</p>
+                    <div>         
+                        <input type="radio" id="four" name="communicate" value="Strongly Agree"> 
+                        <label for="four">Strongly Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="three" name="communicate" value="Agree"> 
+                        <label for="three">Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="two" name="communicate" value="Disagree"> 
+                        <label for="two">Disagree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="one" name="communicate" value="Strongly disagree"> 
+                        <label for="one">Strongly disagree</label><br>  
+                    </div>
+                </li>
+                <li>
+                    <p>I am willing to take up new tasks and assignments</p>
+                    <div>         
+                        <input type="radio" id="four" name="willing-tasks" value="Strongly Agree"> 
+                        <label for="four">Strongly Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="three" name="willing-tasks" value="Agree"> 
+                        <label for="three">Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="two" name="willing-tasks" value="Disagree"> 
+                        <label for="two">Disagree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="one" name="willing-tasks" value="Strongly disagree"> 
+                        <label for="one">Strongly disagree</label><br>  
+                    </div>
+                </li>
+                <li>
+                    <p>I always complete my task at the appropriate time</p>
+                    <div>         
+                        <input type="radio" id="four" name="complete-tasks" value="Strongly Agree"> 
+                        <label for="four">Strongly Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="three" name="complete-tasks" value="Agree"> 
+                        <label for="three">Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="two" name="complete-tasks" value="Disagree"> 
+                        <label for="two">Disagree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="one" name="complete-tasks" value="Strongly disagree"> 
+                        <label for="one">Strongly disagree</label><br>  
+                    </div>
+                </li>
+                <li>
+                    <p>I am making use of the company's tools and materials to improve my learning.</p>
+                    <div>         
+                        <input type="radio" id="four" name="company-tools" value="Strongly Agree"> 
+                        <label for="four">Strongly Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="three" name="company-tools" value="Agree"> 
+                        <label for="three">Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="two" name="company-tools" value="Disagree"> 
+                        <label for="two">Disagree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="one" name="company-tools" value="Strongly disagree"> 
+                        <label for="one">Strongly disagree</label><br>  
+                    </div>
+                </li>
+                <li>
+                    <p>My mentor is not available to guide me.</p>
+                    <div>         
+                        <input type="radio" id="four" name="no-mentor" value="Strongly Agree"> 
+                        <label for="four">Strongly Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="three" name="no-mentor" value="Agree"> 
+                        <label for="three">Agree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="two" name="no-mentor" value="Disagree"> 
+                        <label for="two">Disagree</label><br>  
+                    </div>
+                    <div>         
+                        <input type="radio" id="one" name="no-mentor" value="Strongly disagree"> 
+                        <label for="one">Strongly disagree</label><br>  
+                    </div>
+                </li>
+                <li>
+                    <label for="story">Describe the tasks/assigments you have worked on:</label><br>
+                    <textarea id="story" name="tasks-done" cols="35" rows="10" placeholder="Describe the tasks/assigments you have worked on"></textarea>
+                </li>
+                <li style="padding: 10px 5px;">
+                    <label for="story">What recommendations would you suggest for the improvement of the internship programme?</label><br>
+                    <textarea id="story" name="suggest" cols="35" rows="10" placeholder="Suggest improvement"></textarea>
+                </li>
+                <li style="padding: 10px 5px;">
+                    <label for="story">Would you recommend this programme to prospective interns? Please provide comments.</label><br>
+                    <textarea id="story" name="recommend" cols="35" rows="10" placeholder="Please provide comments"></textarea>
+                </li>
+                
+            </ol>
+            <button style="cursor: pointer; background-color:rgba(220, 0, 0, 1); border-radius: 10px; padding: 20px 20px; border: 0; color: #fff; font-size: 1rem; " onClick="surveyform()">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
