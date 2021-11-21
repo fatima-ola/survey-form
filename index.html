@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self Assessment Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div style="text-align: center; margin-top: 3.5em;">
-    <h1 style="color: rgb(34, 34, 167); font-size: 2rem;"><span style="color: red;">e</span>Tranzact <span style="color: black; font-size: 20px;">Intenational PLC</span></h1>
+   <div class="main-header">
+    <h1 class="company-name"><span class="letter-e">e</span>Tranzact <span class="plc">Intenational PLC</span></h1>
     <h1>Intern Assessment Form</h1>
     <p>Fill the form to assess your performance so far in the internship programme</p>
    </div>
-   <div style="text-align:center; background-color: rgb(238, 238, 238); border-radius: 5px;">
-    <p style="padding: 30px;">By filling this form you confirm that eTranzact has your consent to the holding, processing of your personal data for all purposes relating to your internship.</p>
+   <div class="consent">
+    <p>By filling this form you confirm that eTranzact has your consent to the holding, processing of your personal data for all purposes relating to your internship.</p>
    </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script type="text/javascript">
@@ -34,10 +35,10 @@
            });
        }
    </script>
-    <div style="display: flex; justify-content: center;">
+    <div class="form-section">
         <form  id="mysurveyform" >
             <ol>
-                <li style="padding: 10px 0;">
+                <li >
                     <label for="title">Title</label>
                     <select id="title" name="title">
                       <option value="">Select</option>
@@ -46,7 +47,7 @@
                       <option value="Mrs">Mrs</option>
                     </select> 
                 </li>
-                <li style="padding: 10px 0;">
+                <li >
                     <label for="department">Department</label>
                     <select id="department" name="department">
                        <option value="">Select</option>
@@ -56,23 +57,23 @@
                       <option value="Customer Support">Customer Support</option>
                     </select> 
                 </li>
-                <li style="padding: 10px 0;">
+                <li >
                     <label for="startdate">Start Date</label>
-                    <input type="date" value="yyyy-mm-dd" name="startdate" id="startdate" required>
+                    <input type="date" value="yyyy-MM-dd" name="startdate" id="startdate" required>
                 </li>
-                <li style="padding: 10px 0;">
+                <li >
                     <label for="fname">First name</label>
                     <input type="text" name="fname" id="fname" required>
                 </li>
-                <li style="padding: 10px 0;">
+                <li >
                     <label for="lname">Last name</label>
                     <input type="text" name="lname" id="lname" required>
                 </li>
-                <li style="padding: 10px 0;">
+                <li >
                     <label for="email">Email Address</label>
                     <input type="text" name="email" id="email" required>
                 </li>
-                <li style="padding: 10px 0;">
+                <li >
                     <label for="telNo">Phone number:</label>
                     <input id="telNo" name="telNo" type="tel">
                 </li>
@@ -242,7 +243,7 @@
                 </li>
                 
             </ol>
-            <button style="cursor: pointer; background-color:rgba(220, 0, 0, 1); border-radius: 10px; padding: 20px 20px; border: 0; color: #fff; font-size: 1rem; " onClick="surveyform()">Submit</button>
+            <button  onClick="surveyform()">Submit</button>
         </form>
     </div>
 </body>
